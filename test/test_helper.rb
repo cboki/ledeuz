@@ -12,9 +12,9 @@ class ActiveSupport::TestCase
   # Add more helper methods to be used by all tests here...
   def select_date(date, from:)
     label_el = find('label', text: from)
-    id = label_el['for'].delete_suffix('_1i')
+    id = label_el['for'].delete_suffix('_3i')
     select(date.year, from: "#{id}_1i")
-    select(date.strftime("%B"), from: "#{id}_2i")
+    select(I18n.l(date, format: "%B"), from: "#{id}_2i")
     select(date.day, from: "#{id}_3i")
   end
 

@@ -33,6 +33,6 @@ class GamesTest < ApplicationSystemTestCase
 
   test "a user cannot access /games/new page" do
     visit "/games/new"
-    assert_text 'Login'
+    assert_text 'Connexion'
   end
 end
