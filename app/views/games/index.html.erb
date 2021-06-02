@@ -1,0 +1,5 @@
+<h2>Prochaines parties</h2>
+<% @games.each do |partie| %>
+  <p><%= partie.start_datetime %></p>
+  <p><%= partie.status %></p>
+<% end %>
