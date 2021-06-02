@@ -27,7 +27,7 @@ class GamesTest < ApplicationSystemTestCase
 
     #should be redirected to Home with new session
     assert_equal root_path, page.current_path
-    assert_text "2021-08-15"
+    assert_text "15 août 2021"
   end
 
   test "an user cannot access /games/new page" do
