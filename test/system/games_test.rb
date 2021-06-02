@@ -15,7 +15,6 @@ class GamesTest < ApplicationSystemTestCase
   test "lets an admin create a new game session" do
     login_as users(:clement)
     visit "/games/new"
-    # save_and_open_screenshot
 
     select_date Date.new(2021,8,15), :from => 'Start datetime'
     click_on "Créer la partie"
@@ -23,5 +22,17 @@ class GamesTest < ApplicationSystemTestCase
     #should be redirected to Home with new session
     assert_equal root_path, page.current_path
     assert_text "2021-08-15"
+  end
+
+  test "a logged in user cannot access /games/new page" do
+    login_as users(:sophie)
+    visit "/games/new"
+    # save_and_open_screenshot
+    assert_text 'Error'
+  end
+
+  test "a user cannot access /games/new page" do
+    visit "/games/new"
+    assert_text 'Login'
   end
 end
