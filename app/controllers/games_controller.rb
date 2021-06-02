@@ -12,6 +12,7 @@ skip_before_action :authenticate_user!, only: [ :index ]
 
   def create
     @game = Game.new(game_params)
+    @game.status = 'Ouvert'
     authorize @game
 
     if @game.save

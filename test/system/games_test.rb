@@ -1,12 +1,18 @@
 require "application_system_test_case"
 
 class GamesTest < ApplicationSystemTestCase
-  test "visiting the index" do
+  test "visiting the root page as a visitor" do
     visit "/"
     assert_selector "h2", text: "Prochaines parties"
   end
 
-  test "visiting the index as a logged in user" do
+  test "visiting the root page as a user" do
+    login_as users(:sophie)
+    visit "/"
+    assert_selector "h2", text: "Prochaines parties"
+  end
+
+  test "visiting the root page as an admin" do
     login_as users(:sophie)
     visit "/"
     assert_selector "h2", text: "Prochaines parties"
@@ -24,14 +30,14 @@ class GamesTest < ApplicationSystemTestCase
     assert_text "2021-08-15"
   end
 
-  test "a logged in user cannot access /games/new page" do
+  test "an user cannot access /games/new page" do
     login_as users(:sophie)
     visit "/games/new"
     # save_and_open_screenshot
     assert_text 'Error'
   end
 
-  test "a user cannot access /games/new page" do
+  test "a visitor cannot access /games/new page" do
     visit "/games/new"
     assert_text 'Connexion'
   end

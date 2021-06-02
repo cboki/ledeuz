@@ -1,7 +1,11 @@
+<div id="home_header">
+  <%= image_tag "logo.svg", id: "home_logo" %>
+</div>
+
 <div class="container">
   <h2>Prochaines parties</h2>
   <% @games.each do |partie| %>
-    <p><%= partie.start_datetime %></p>
+    <p><%= time_tag partie.start_datetime %></p>
     <p><%= partie.status %></p>
   <% end %>
 </div>

@@ -1,4 +1,8 @@
-<%= simple_form_for(@game) do |f| %>
-  <%= f.input :start_datetime %>
-  <%= f.submit "Créer la partie" %>
-<% end %>
+<div class="container">
+  <h2>Créer une nouvelle partie</h2>
+  <p>Indiquez la date de début du jeu :</p>
+  <%= simple_form_for(@game) do |f| %>
+    <%= f.input :start_datetime %>
+    <%= f.submit "Créer la partie" %>
+  <% end %>
+</div>

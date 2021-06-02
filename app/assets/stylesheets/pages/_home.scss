@@ -1,1 +1,19 @@
 // Specific CSS for your home-page
+#home_header {
+  height: 100vh;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#home_logo {
+ width: 80%;
+ rotate: -10deg;
+ animation: pulse 2s cubic-bezier(.46,.03,.52,.96) infinite;
+}
+
+@keyframes pulse {
+  50% {
+    transform: scale(1.1);
+  }
+}
