@@ -2,7 +2,7 @@ class GamesController < ApplicationController
 skip_before_action :authenticate_user!, only: [ :index ]
 
   def index
-    @games = policy_scope(Game)
+    @games = policy_scope(Game).limit(4)
   end
 
   def show
