@@ -1,6 +1,8 @@
 partie1:
+  id: 1
   start_datetime: "2021-07-14"
   status: "inscription"
 partie2:
+  id: 2
   start_datetime: "2021-07-21"
   status: "terminé"

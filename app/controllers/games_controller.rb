@@ -5,6 +5,11 @@ skip_before_action :authenticate_user!, only: [ :index ]
     @games = policy_scope(Game)
   end
 
+  def show
+    @game = Game.find(params[:id])
+    authorize @game
+  end
+
   def new
     @game = Game.new
     authorize @game
