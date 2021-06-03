@@ -44,7 +44,7 @@ class GamesTest < ApplicationSystemTestCase
   test "a user can access show page of a game session" do
     login_as users(:sophie)
     visit "/games/1"
-    save_and_open_screenshot
+    #save_and_open_screenshot
     assert_text "14 juillet 2021"
   end
 end
