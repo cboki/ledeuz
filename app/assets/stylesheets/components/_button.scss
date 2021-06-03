@@ -1,7 +1,25 @@
+.btn {
+  font-weight: bold;
+  margin: 1em 0px;
+  text-transform: uppercase;
+}
+
+.btn-lg {
+  font-size: 1.6em;
+  padding: 0.8em;
+}
+
+.btn-md {
+  font-size: 1em;
+  padding: 0.8em;
+}
+
 .btn-orange {
   background-color: $orange;
   color: white;
-  font-weight: bold;
-  font-size: 1.6em;
-  padding: 0.8em;
+}
+
+.btn-bluelight {
+  border: 2px solid $marine-blue;
+  color: $marine-blue;
 }

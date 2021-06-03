@@ -1,7 +1,15 @@
 .wrapper {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .wrap-blue {
   background-color: $blue;
+}
+
+.flex {
+  height: 100%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 }

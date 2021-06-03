@@ -1,17 +1,22 @@
 <div id="home_banner">
-  <%= image_tag "logo-yellow-orange.svg", id: "home_logo" %>
-  <h1>Jeu de lettres. Géant et en plein air.</h1>
-  <%= link_to "RÉSERVER", "#next-sessions", class:"btn-orange" %>
+  <div class="flex">
+    <%= image_tag "logo-yellow-orange.svg", id: "home_logo" %>
+    <h1>Jeu de lettres. Géant et en plein air.</h1>
+    <%= link_to "Réserver", "#", class:"btn btn-lg btn-orange" %>
+  </div>
 </div>
 
 <div class="wrapper"></div>
 
 <div class="wrapper wrap-blue">
-  <div class="container" id="#next-sessions">
+  <div class="container flex" id="#next-sessions">
     <h2>Prochaines parties</h2>
     <% @games.each do |partie| %>
-      <p><%= time_tag partie.start_datetime %></p>
-      <p><%= partie.status %></p>
-    <% end %>
+      <div class="session-home-card">
+        <%= time_tag partie.start_datetime %>
+        <p>Place Cujas</p>
+      </div>
+      <% end %>
+      <%= link_to "Voir plus", "#", class:"btn btn-md btn-bluelight" %>
   </div>
 </div>

@@ -1,0 +1,16 @@
+.session-home-card {
+  width: inherit;
+  background-color: $white;
+  position: relative;
+  padding: 0.8em;
+
+  box-shadow: 4px 5px $blue, 6px 7px black;
+
+  time {
+    text-transform: capitalize;
+  }
+
+  &:not(:first-of-type) {
+    margin-top: 1em;
+  }
+}
