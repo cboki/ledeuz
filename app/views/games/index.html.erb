@@ -1,13 +1,16 @@
 <div id="home_banner">
-  <%= image_tag "logo-orange-yellow.svg", id: "home_logo" %>
+  <%= image_tag "logo-yellow-orange.svg", id: "home_logo" %>
   <%= link_to "RÉSERVER", "#next-sessions", class:"btn-orange" %>
 </div>
 
-<div class="container" id="#next-sessions">
-  <h2>Prochaines parties</h2>
-  <% @games.each do |partie| %>
-    <p><%= time_tag partie.start_datetime %></p>
-    <p><%= partie.status %></p>
-  <% end %>
-</div>
+<div class="wrapper"></div>
 
+<div class="wrapper wrap-blue">
+  <div class="container" id="#next-sessions">
+    <h2>Prochaines parties</h2>
+    <% @games.each do |partie| %>
+      <p><%= time_tag partie.start_datetime %></p>
+      <p><%= partie.status %></p>
+    <% end %>
+  </div>
+</div>
