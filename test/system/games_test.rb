@@ -3,19 +3,19 @@ require "application_system_test_case"
 class GamesTest < ApplicationSystemTestCase
   test "visiting the root page as a visitor" do
     visit "/"
-    assert_selector "h2", text: "Prochaines parties"
+    assert_selector "h2", text: "Prochaines parties".upcase
   end
 
   test "visiting the root page as a user" do
     login_as users(:sophie)
     visit "/"
-    assert_selector "h2", text: "Prochaines parties"
+    assert_selector "h2", text: "Prochaines parties".upcase
   end
 
   test "visiting the root page as an admin" do
     login_as users(:clement)
     visit "/"
-    assert_selector "h2", text: "Prochaines parties"
+    assert_selector "h2", text: "Prochaines parties".upcase
   end
 
   test "lets an admin create a new game session" do
@@ -38,7 +38,7 @@ class GamesTest < ApplicationSystemTestCase
 
   test "a visitor cannot access /games/new page" do
     visit "/games/new"
-    assert_text 'Connexion'
+    assert_text 'Connexion'.upcase
   end
 
   test "a user can access show page of a game session" do
