@@ -1,9 +1,12 @@
 // Specific CSS for your home-page
-#home_header {
+#home_banner {
   height: 100vh;
   display:flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+
+  background-color: $yellow;
 }
 
 #home_logo {
